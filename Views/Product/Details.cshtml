@@ -1,0 +1,65 @@
+@model SmartShop.Models.Smartphone
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+	<legend>Smartphone</legend>
+	<dl>
+		<dt>
+			@Html.DisplayNameFor(model => model.Brand)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.Brand)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.ModelNr)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.ModelNr)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.OS)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.OS)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.ScreenSize)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.ScreenSize)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.InternalMemory)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.InternalMemory)
+		</dd>
+
+		<dt>
+			@Html.DisplayNameFor(model => model.Price)
+		</dt>
+
+		<dd>
+			@Html.DisplayFor(model => model.Price)
+		</dd>
+
+	</dl>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.SmartphoneId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

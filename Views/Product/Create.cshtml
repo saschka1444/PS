@@ -1,0 +1,79 @@
+@model SmartShop.Models.Smartphone
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset class="form-horizontal">
+        <legend>Smartphone</legend>
+
+        <div class="control-group">
+            @Html.LabelFor(model => model.Brand, new { @class = "control-label" })
+			<div class="controls">
+				@Html.EditorFor(model => model.Brand)
+				@Html.ValidationMessageFor(model => model.Brand, null, new { @class = "help-inline" })
+			</div>
+		</div>
+
+        <div class="control-group">
+            @Html.LabelFor(model => model.ModelNr, new { @class = "control-label" })
+			<div class="controls">
+				@Html.EditorFor(model => model.ModelNr)
+				@Html.ValidationMessageFor(model => model.ModelNr, null, new { @class = "help-inline" })
+			</div>
+		</div>
+
+        <div class="control-group">
+            @Html.LabelFor(model => model.OS, new { @class = "control-label" })
+			<div class="controls">
+				@Html.EditorFor(model => model.OS)
+				@Html.ValidationMessageFor(model => model.OS, null, new { @class = "help-inline" })
+			</div>
+		</div>
+
+        <div class="control-group">
+            @Html.LabelFor(model => model.ScreenSize, new { @class = "control-label" })
+			<div class="controls">
+				@Html.EditorFor(model => model.ScreenSize)
+				@Html.ValidationMessageFor(model => model.ScreenSize, null, new { @class = "help-inline" })
+			</div>
+		</div>
+
+        <div class="control-group">
+            @Html.LabelFor(model => model.InternalMemory, new { @class = "control-label" })
+			<div class="controls">
+				@Html.EditorFor(model => model.InternalMemory)
+				@Html.ValidationMessageFor(model => model.InternalMemory, null, new { @class = "help-inline" })
+			</div>
+		</div>
+
+        <div class="control-group">
+            @Html.LabelFor(model => model.Price, new { @class = "control-label" })
+			<div class="controls">
+				@Html.EditorFor(model => model.Price)
+				@Html.ValidationMessageFor(model => model.Price, null, new { @class = "help-inline" })
+			</div>
+		</div>
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Create" class="btn" />
+        </div>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
